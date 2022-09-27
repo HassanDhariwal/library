@@ -1,0 +1,20 @@
+<h1> partial form </h1>
+
+<%= form_with model: @book do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </div>
+  <div>
+    <%= form.label :author_name %><br>
+    <%= form.text_field :author_name %>
+  </div>
+  <div>
+    <%= form.label :buyer_name %><br>
+    <%= form.text_area :buyer_name %>
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary"> Crate</button>
+
+  </div>
+<% end%>

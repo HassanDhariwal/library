@@ -1,0 +1,12 @@
+<h1>Show form</h1>
+<h1><%= @book.id %></h1>
+<h1><%= @book.title %></h1>
+<h1><%= @book.author_name %></h1>
+<h1><%= @book.buyer_name %></h1>
+<ul>
+  <button> <%= link_to "edit",  edit_book_path(@book) %></button>
+  <button> <%= link_to "destroy",  book_path(@book), data: {
+    turbo_method: :delete,
+    turbo_confirm: "Are you sure?"
+    } %></button>
+</ul>

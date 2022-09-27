@@ -1,0 +1,25 @@
+<h1>Books#index</h1>
+<%= link_to "new Book", new_book_path %>
+<table class="table">
+  <thead>
+    <% @books.each do |book| %>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Title</th>
+      <th scope="col">Author</th>
+      <th scope="col">Buyer</th>
+      <th scope="col">Edit</th>
+    </tr>
+    </thead>
+    <tbody>
+
+      <td><%= book.id %></td>
+      <td><%= book.title %></td>
+      <td><%= book.author_name %></td>
+      <td><%= book.buyer_name %></td>
+      <td><%= link_to 'Edit', edit_book_path(book) %></td>
+   <% end %>
+  </tbody>
+ </table>
+
+
